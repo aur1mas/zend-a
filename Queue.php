@@ -3,13 +3,8 @@
  * @author aur1mas <aur1mas@devnet.lt>
  * @package Queue
  */
-class Core_Queue {
-
-	/**
-	 * queue types
-	 * @var array
-	 */
-	protected static $queues = array();
+class Core_Queue
+{
 	
 	/**
 	 * queue instance
@@ -69,9 +64,6 @@ class Core_Queue {
 	 */
 	public static function sendMessage($queue_type, $message)
     {
-		if (!in_array($queue_type, self::$queues))
-			throw new Exception('Wrong queue type provided');
-		
 		$queue = (self::getInstance()->getAdapter()->isExists($queue_type)) ?
 			self::getInstance()->setOption('name', $queue_type) : self::getInstance()->createQueue($queue_type);
 
