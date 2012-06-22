@@ -17,7 +17,7 @@ class ZendA_View_Helper_FormEmail extends Zend_View_Helper_FormElement
      * @return string
      * @author aur1mas <aurimas@devnet.lt>
      */
-    public function formText($name, $value = null, $attribs = null)
+    public function formEmail($name, $value = null, $attribs = null)
     {
         $info = $this->_getInfo($name, $value, $attribs);
         extract($info); // name, value, attribs, options, listsep, disable

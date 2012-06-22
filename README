@@ -2,6 +2,10 @@ ZendA - is ZendAddons library which completes missing Zend Framework functionali
 
 v. 0.3.0
 
+== Instaliation ==
+
+Put code to library folder. In your application.ini file add: autoloaderNamespaces[] = "ZendA" & in your Bootstrap.php file: $view->addHelperPath('ZendA/View/Helper/', 'ZendA_View_Helper');
+
 == Tests ==
 
 To run tests you must add Zend directory. I do this by adding symbolic link for example: ln -s /Users/user/Sites/htdocs/Zend/Current/ Zendr
