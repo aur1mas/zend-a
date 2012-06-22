@@ -3,7 +3,7 @@
  * @author aur1mas <aur1mas@devnet.lt>
  * @package Queue
  */
-class Core_Queue
+class ZendA_Queue
 {
 	
 	/**
