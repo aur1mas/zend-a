@@ -2,11 +2,13 @@
 	<testsuite name="Zend Addons">
 		<directory>./library/ZendA</directory>
 	</testsuite>
-	<filter>
-        <blacklist>
-          <directory>./library/ZendA</directory>
-        </blacklist>
-	</filter>
+    <filter>
+      <whitelist>
+        <exclude>
+          <directory>../library/Zend</directory>
+        </exclude>
+      </whitelist>
+    </filter>
 	<logging>
 		<log type="coverage-html" target="./log/report" charset="UTF-8" yui="true" highlight="true"
 			lowUpperBound="35" highLowerBound="70" />

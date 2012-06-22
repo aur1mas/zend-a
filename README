@@ -1,1 +1,7 @@
 ZendA - is ZendAddons library which completes missing Zend Framework functionality.
+
+v. 0.3.0
+
+== Tests ==
+
+To run tests you must add Zend directory.
