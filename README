@@ -4,4 +4,4 @@ v. 0.3.0
 
 == Tests ==
 
-To run tests you must add Zend directory. I do this by adding symbolic link for example: ln -s /Users/user/Sites/htdocs/Zend/Current/ Zend
+To run tests you must add Zend directory. I do this by adding symbolic link for example: ln -s /Users/user/Sites/htdocs/Zend/Current/ Zendr
