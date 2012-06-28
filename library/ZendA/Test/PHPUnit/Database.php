@@ -5,7 +5,7 @@
  * @package ZendA
  * @author aur1mas <aurimas@devnet.lt>
  */
-class ZendA_Test_PHPUnit_Database extends ZPHPUnit_Extensions_Database_TestCase
+class ZendA_Test_PHPUnit_Database extends PHPUnit_Extensions_Database_TestCase
 {
 
     /**
