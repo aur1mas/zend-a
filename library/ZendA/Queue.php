@@ -26,7 +26,7 @@ class ZendA_Queue
     {
 		if (count(self::$config) === 0) {
 			$config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV);
-			self::$config = $config->queue;
+			self::$config = $config->resources->db->params;
 		}
 
 		return self::$config;
@@ -36,11 +36,11 @@ class ZendA_Queue
 	 * returns (creates) queue instance (implements singleton)
 	 * @return Zend_Queue
 	 */
-	public function getInstance()
+	public static function getInstance()
     {
 		if (!self::$instance instanceof Zend_Queue) {
 			$config = self::getConfig();
-			
+
 			self::$instance = new Zend_Queue('Db', array(
 				'driverOptions' => array(
 					'host' => $config->host,
@@ -48,7 +48,7 @@ class ZendA_Queue
 					'username' => $config->username,
 					'password' => $config->password,
 					'dbname' => $config->dbname,
-					'type' => $config->type),
+					'type' => "pdo_mysql"),
 				'options' => array(
 					Zend_Db_Select::FOR_UPDATE => true)));
 		}
