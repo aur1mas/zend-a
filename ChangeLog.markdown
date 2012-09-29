@@ -3,3 +3,4 @@
 
 * Added PHPUnit Database class to support database testing
 * Fixed classname for PHPUnit database class
+* Added filter class which helps filtering URL scheme.
