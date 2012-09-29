@@ -1,5 +1,5 @@
 {
-    "name": "aur1mas/ZendA",
+    "name": "aur1mas/zend-a",
     "description": "Zend Addition. Missing Zend Framework components",
     "require": {
         "zendframework/zendframework1": "1.*"
