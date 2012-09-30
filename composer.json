@@ -1,7 +1,14 @@
 {
     "name": "aur1mas/zend-a",
+    "type": "library",
     "description": "Zend Addition. Missing Zend Framework components",
+    "authors": [
+        {"name": "Aurimas Baubkus", "email": "aurimas@devnet.lt"}
+    ],
     "require": {
         "zendframework/zendframework1": "1.*"
+    },
+    "autoload": {
+        "psr-0": { "ZendA_": "library"}
     }
 }
