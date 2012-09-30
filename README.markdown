@@ -6,10 +6,16 @@ Version: 0.4.3
 Instaliation
 ============
 
-Put code to library folder. In your application.ini file add:
+1. Through http://getcomposer.org. In your composer.json file add:
+    "aur1mas/zend-a": "dev-master"
+
+1.1 Update your Composer libs
+    php composer.phar update
+
+3. In your application.ini file add:
 	autoloaderNamespaces[] = "ZendA"
 
-And in your Bootstrap.php file:
+4. And in your Bootstrap.php file:
 
 	$view->addHelperPath('ZendA/View/Helper/', 'ZendA_View_Helper');
 
