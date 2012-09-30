@@ -7,12 +7,15 @@ Instaliation
 ============
 
 1. Through http://getcomposer.org. In your composer.json file add:
-    "aur1mas/zend-a": "dev-master"
+
+	"aur1mas/zend-a": "dev-master"
 
 1.1 Update your Composer libs
-    php composer.phar update
+
+	php composer.phar update
 
 3. In your application.ini file add:
+
 	autoloaderNamespaces[] = "ZendA"
 
 4. And in your Bootstrap.php file:
