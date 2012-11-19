@@ -1,6 +1,6 @@
 ZendA - is ZendAddons library which completes missing Zend Framework functionality.
 
-Version: 0.4.3
+Version: 0.4.4
 ==============
 
 Instaliation

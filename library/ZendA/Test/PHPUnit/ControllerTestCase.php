@@ -8,6 +8,8 @@ class ZendA_Test_PHPUnit_ControllerTestCase extends Zend_Test_PHPUnit_Controller
 
 	protected $application;
 
+	protected $_directoryStructure = 'modules';
+
 	protected function setUp()
 	{    
 		$this->bootstrap = array($this, 'appBootstrap');
@@ -20,10 +22,14 @@ class ZendA_Test_PHPUnit_ControllerTestCase extends Zend_Test_PHPUnit_Controller
 			APPLICATION_PATH . '/configs/application.ini'
 		);
 
-		$this->_frontController->addModuleDirectory(APPLICATION_PATH . "/modules");
-		$this->_frontController->setDefaultControllerName('index')
-		    ->setDefaultAction('index')
-		    ->setDefaultModule('default');
+		if ($this->_directoryStructure === 'modules') {
+			$this->_frontController->addModuleDirectory(APPLICATION_PATH . "/modules");
+			$this->_frontController->setDefaultControllerName('index')
+			    ->setDefaultAction('index')
+			    ->setDefaultModule('default');
+		} else {
+			$this->_frontController->setControllerDirectory(APPLICATION_PATH . '/controllers/');
+		}
 		
 		Zend_Controller_Action_HelperBroker::addHelper(new Zend_Layout_Controller_Action_Helper_Layout);
 	}
